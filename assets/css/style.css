@@ -1,0 +1,103 @@
+/* Setting up variables for ease of future maintenance */
+:root {
+  --body-color: hsl(0, 0%, 10%);
+  --accent-color: hsl(360, 81%, 50%);
+  --text-color: hsl(206, 17%, 58%);
+
+/* --body-color: hsl(204, 45%, 98%);
+--accent-color: hsl(360, 91%, 36%);
+--text-color: hsl(206, 17%, 20%); */
+  --dim-white: #f9fbfd;
+}
+
+/* For browsers default dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+  --body-color: hsl(0, 0%, 10%);
+  --accent-color: hsl(360, 81%, 50%);
+  --text-color: hsl(206, 17%, 58%);
+  }
+}
+
+/* set 1rem to 10px instead of native 16px 
+to make it easier to calculate font-size values 
+for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+html {
+  font-size: 62.5%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-width: 96%;
+  text-rendering: optimizeSpeed;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--body-color);
+  color: var(--dim-white);
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.625rem;
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Main Style starts here */
+
+
+
+
+/* using a mobile-first approach, */
+/* Set point for tablet screens */
+@media screen and (min-width: 768px) {
+
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+
+}
