@@ -1,22 +1,9 @@
 /* Setting up variables for ease of future maintenance */
 :root {
-  --body-color: hsl(0, 0%, 10%);
+  --bg-primary: hsl(0, 0%, 10%);
   --accent-color: hsl(360, 81%, 50%);
-  --text-color: hsl(206, 17%, 58%);
-
-/* --body-color: hsl(204, 45%, 98%);
---accent-color: hsl(360, 91%, 36%);
---text-color: hsl(206, 17%, 20%); */
-  --dim-white: #f9fbfd;
-}
-
-/* For browsers default dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-  --body-color: hsl(0, 0%, 10%);
-  --accent-color: hsl(360, 81%, 50%);
-  --text-color: hsl(206, 17%, 58%);
-  }
+  --text-primary: #f9fbfd;
+  --bg-secondary: hsl(206, 17%, 58%);
 }
 
 /* set 1rem to 10px instead of native 16px 
@@ -39,8 +26,8 @@ body {
   font-size: 1.75rem;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--body-color);
-  color: var(--dim-white);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -53,7 +40,6 @@ select {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.625rem;
-  color: var(--text-color);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -87,14 +73,27 @@ p {
 }
 
 /* Main Style starts here */
+header {
+  padding: 2.5rem;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  margin-bottom: 1rem;
+}
 
-
-
+main {
+  text-align: center;
+}
 
 /* using a mobile-first approach, */
 /* Set point for tablet screens */
 @media screen and (min-width: 768px) {
-
+  header {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
 }
 
 /* media query for larger screens */
