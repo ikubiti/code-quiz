@@ -4,6 +4,10 @@
   --accent-color: hsl(360, 81%, 50%);
   --text-primary: #f9fbfd;
   --bg-secondary: hsl(206, 17%, 58%);
+  --outer-space: #33393f;
+  --bright-turquoise: #2aefcb;
+  --gin: #e0eae4;
+  --heliotrope: #e866ec;  
 }
 
 /* set 1rem to 10px instead of native 16px 
@@ -77,12 +81,54 @@ header {
   padding: 2.5rem;
   text-align: center;
   background-color: var(--bg-secondary);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.main-header:hover {
+  font-style: italic;
+  font-size: larger;
+}
+
+#high-score {
+  cursor: pointer;
 }
 
 main {
   text-align: center;
 }
+
+#quiz-container {
+  justify-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.show-target {
+  visibility: visible;
+}
+
+.hide-target {
+  visibility: hidden;
+}
+
+/* li {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: var(--bright-turquoise);
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+button {
+  min-width: 100%;
+  background-color: var(--bright-turquoise);
+  border: none;
+} */
 
 /* using a mobile-first approach, */
 /* Set point for tablet screens */
@@ -91,12 +137,14 @@ main {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     font-size: 2rem;
   }
 }
 
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
-
+  header {
+    font-size: 2.5rem;
+  }
 }
