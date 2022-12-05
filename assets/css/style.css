@@ -7,7 +7,9 @@
   --outer-space: #33393f;
   --bright-turquoise: #2aefcb;
   --gin: #e0eae4;
-  --heliotrope: #e866ec;  
+  --light-violet: rgb(210,149,254);
+  --muted-green: rgb(129,217,129);  
+  --midtone-blue: rgb(58,176,254);  
 }
 
 /* set 1rem to 10px instead of native 16px 
@@ -15,11 +17,6 @@ to make it easier to calculate font-size values
 for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
 html {
   font-size: 62.5%;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -49,27 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h2 {
   font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.5rem;
 }
 
 p {
@@ -85,9 +66,19 @@ header {
   font-weight: 600;
 }
 
+.reset-primary {
+  color: var(--text-primary);
+}
+
+.change-primary {
+  color: var(--accent-color);
+}
+
+/* Get the attention the user when hovering over an element */
 .main-header:hover {
   font-style: italic;
   font-size: larger;
+  color: var(--muted-green);
 }
 
 #high-score {
@@ -96,14 +87,15 @@ header {
 
 main {
   text-align: center;
+  margin: 2rem auto;
 }
 
 #quiz-container {
-  justify-content: center;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
+/* Change the visibility of any element without distorting the spatial arrangement */
 .show-target {
   visibility: visible;
 }
@@ -112,23 +104,127 @@ main {
   visibility: hidden;
 }
 
-/* li {
-  height: 50px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: var(--bright-turquoise);
-  color: white;
-  font-size: 1.5em;
-  line-height: 1.5;
-  text-align: left;
+/* Decorate any text */
+.outline-header {
+  text-shadow: -1px 0 coral, 0 1px coral, 1px 0 coral, 0 -1px coral;
 }
 
-button {
-  min-width: 100%;
-  background-color: var(--bright-turquoise);
+/* Main introduction heading style */
+.instr-header {
+  text-align: center;
+  margin: 2rem auto;
+  padding-top: 0px;
+  color: var(--bg-primary);
+  text-shadow: 1px 1px 2px white, 0 0 25px  var(--bright-turquoise), 0 0 5px white;
+}
+
+.bright-blue{
+  color: var(--midtone-blue);
+}
+
+.bright-turquoise{
+  color: var(--bright-turquoise);
+}
+
+.quiz-question {
+  font-size: 2rem;
+}
+
+/* Quiz buttons styling */
+.quiz-button {
   border: none;
-} */
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: -1px 0 coral, 0 1px coral, 1px 0 coral, 0 -1px coral;
+}
+
+.answer-btn {
+  display: block;
+  border-radius: 10px;
+  margin: 0.3rem auto;
+  width: 50%;
+}
+
+/* Hover behavior */
+.quiz-button:hover {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 2.5rem;
+  background-color: blue;
+}
+
+.answer-btn:hover {
+  width: 60%;
+}
+
+.feedback {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.feedback-bdr {
+  border-top: 1px solid var(--bg-secondary);
+}
+
+.danger-red {
+  color: var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+input:focus{
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--muted-green);
+  color: blue;
+}
+
+.high-msg {
+  display: block;
+  margin-top: 2rem;
+}
+
+/* Styling for other displays not related to the quiz questions */
+.score-button {
+  border: none;
+  background-color: var(--bg-secondary);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 22px;
+  margin: 5px 5px 5px 8px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: -1px 0 coral, 0 1px coral, 1px 0 coral, 0 -1px coral;
+}
+
+.score-button:hover {
+  font-size: 2.0rem;
+  color: yellowgreen;
+  font-weight: bold;
+  background-color: blue;
+}
+
+.space-down {
+  margin-bottom: 2rem;
+}
+
+.list-display {
+  text-align: left;
+}
 
 /* using a mobile-first approach, */
 /* Set point for tablet screens */
@@ -138,13 +234,41 @@ button {
     margin: 0 auto;
     justify-content: space-between;
     margin-bottom: 4rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+
+  #quiz-container {
+    margin: 2rem auto;
+  }
+
+  .ol {
+    margin-top: 1.5rem;
+  }
+
+  .feedback {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
 }
 
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
   header {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  #quiz-container{
+    max-width: 70%;
+    margin-top: 3rem;
+  }
+
+  ol {
+    margin-top: 2rem;
+  }
+
+  .feedback {
+    font-size: 3rem;
+    margin-top: 3rem;
   }
 }

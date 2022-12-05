@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Coding Quiz</title>
+    <title>Coding Quiz Challenge</title>
 </head>
 <body>
     <header>
         <!-- Provides link to view high scores -->
-        <div id="high-score" class="main-header">View High Scores</div>
+        <div id="high-score" class="main-header outline-header">View High Scores</div>
         <!-- Displays the coding quiz time left -->
-        <div class="main-header">Time: <span id="timer"></span> </div>
+        <div class="main-header outline-header">Time: <span id="timer"></span></div>
     </header>
 
     <main>
         <!-- Container to dynamically present information to user -->
-        <div id="quiz-container"></div>
+        <div id="quiz-container"></div>       
     </main>
     
+    <!-- Holds questions and default high scores data -->
     <script src="./assets/js/data.js"></script>
+    <!-- Main application script -->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
