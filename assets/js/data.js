@@ -22,7 +22,7 @@ var highScoreList = [
     },
 ];
 
-// The quiz questions
+// The set of quiz questions
 const quizQuestions = [
     {
         question: '___ is the language we use to style an HTML document',
